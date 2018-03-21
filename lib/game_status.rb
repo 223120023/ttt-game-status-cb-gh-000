@@ -37,15 +37,16 @@ def won?(board)
 end
 
 def full?(board)
-  full=true
-  board.each do |board|
-    if draw?(board)
-      full= true
-    elsif board==""||board==" "||board==nil
-      full= false
+  board.each do |eachBoard|
+    if board[eachboard]==" "||board[eachboard]==""
+      inprogress=true
     end
   end
-  return full
+  if !inprogress && !won?(board)
+    return true 
+  else
+    return false
+  end
 end
 
 def draw?(board)
