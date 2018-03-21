@@ -38,7 +38,7 @@ end
 
 def full?(board)
   board.each do |eachBoard|
-    if board[eachBoard]==" "||board[eachBoard]==""
+    if eachBoard==" "||eachBoard==""
       inprogress=true
     end
   end
