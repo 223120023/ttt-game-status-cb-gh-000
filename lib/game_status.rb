@@ -51,7 +51,17 @@ def full?(board)
 end
 
 def draw?(board)
-  !won?(board)
+  inprogress=false
+  board.each do |eachBoard|
+    if eachBoard==" "||eachBoard==""
+      inprogress=true
+    end
+  end
+  if !inprogress && !won?(board)
+    return true
+  else
+    return false
+  end
 end
 def over?(board)
   if won?(board)||draw?(board)
