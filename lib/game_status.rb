@@ -69,6 +69,9 @@ def over?(board)
   end
 end
 def winner(board)
+  if !won?(board)
+    return nil
+  end
   won?(board).each do |theWinner|
     if board[theWinner]=="X"
       return "X"
