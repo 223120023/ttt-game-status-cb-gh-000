@@ -37,7 +37,7 @@ def won?(board)
 end
 
 def full?(board)
-  inprogress=true
+  inprogress=false
   board.each do |eachBoard|
     if eachBoard==" "||eachBoard==""
       inprogress=true
