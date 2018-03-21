@@ -43,7 +43,7 @@ def full?(board)
       inprogress=true
     end
   end
-  if !inprogress && !won?(board) 
+  if !inprogress && !won?(board)
     return true
   else
     return false
